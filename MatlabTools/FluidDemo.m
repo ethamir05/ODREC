@@ -38,10 +38,10 @@ clc
 Fluid.GetNISTData();
 
 % Use a GUI for your scripts to select the fluid type if it changes often
-% fluid_name = Fluid.SelectFluidGUI();
+fluid_name = Fluid.SelectFluidGUI();
 
 % or just declare the fluid name manually to avoid the GUI
-fluid_name = 'C2H6O';
+% fluid_name = 'C2H6O';
 
 % Create a Fluid
 f = Fluid(fluid_name);
@@ -55,7 +55,7 @@ density2 = f.Density(10,280);
 % Or using arrays for P and T to get a density array
 P = 10:1:20;
 T = 300*ones(size(P));
-density3 = f.Density(P,T);
+density3 = f.Density(P,T);y
 
 % If you want the partial derivative of density with respect to P and T
 % to use for uncertainty calculations

@@ -147,6 +147,10 @@ classdef Fluid
             Gas(6).MW       = 6*1.00794 + 2*12.0107 + 1*15.999;  % g/mol
             Gas(6).NISTCode = 'C64175';
 
+            
+
+
+
             %Match the gas structure with the input gas type
             match = strcmpi(UserInputs{1},{Gas.Name});
             if any(match)
