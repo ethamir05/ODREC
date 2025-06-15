@@ -255,8 +255,8 @@ classdef ODREC
             if isempty(obj.geom) == 1   %if user does not provide thrust chamber profile
                 [x,Y] = Thrust_Chamber_Profile(obj);
             else                        %if user does provide thrust chamber profile
-                x = [obj.geom(:,1)/100];
-                Y = [obj.geom(:,2)/100];
+                x = [obj.geom(:,1)];
+                Y = [obj.geom(:,2)];
             end
 
             % Mach Number Calculation

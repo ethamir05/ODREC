@@ -63,26 +63,26 @@ N3 = 16;                    %thrust chamber throat entrance number of divisions
 N4 = 16;                    %thrust chamber throat exit number of divisions
 N5 = 30;                    %thrust chamber bell curve nozzle number of divisions
 
-% % Raw geometry input
+% % Raw geometry input (m)
 raw_data = [
-    7.0358,   4.7498;
-    6.0402,   4.5770;
-    5.2310,   4.4109;
-    4.7564,   4.3000;
-    4.0104,   4.1118;
-    3.9726,   4.0808;
-    3.6357,   3.9815;
-    2.2074,   3.4506;
-    0.5062,   2.5416;
-    0.0,      2.3876;     % Throat
-   -2.4243,   3.3329;
-   -2.9258,   3.9039;
-   -3.7846,   5.2530;
-   -6.2451,   6.6802;
-   -8.2935,   6.6802;
-  -14.4018,   6.6802;
-  -22.9464,   6.6802;
-  -31.4960,   6.6802;
+    0.070358,   0.047498;
+    0.060402,   0.045770;
+    0.052310,   0.044109;
+    0.047564,   0.043000;
+    0.040104,   0.041118;
+    0.039726,   0.040808;
+    0.036357,   0.039815;
+    0.022074,   0.034506;
+    0.005062,   0.025416;
+    0.0,      0.023876;     % Throat
+   -0.024243,   0.033329;
+   -0.029258,   0.039039;
+   -0.037846,   0.052530;
+   -0.062451,   0.066802;
+   -0.082935,   0.066802;
+  -0.144018,   0.066802;
+  -0.229464,   0.066802;
+  -0.314960,   0.066802;
 ];
 
 
@@ -160,7 +160,7 @@ Tw = Results.T_w;
 figure(1)
 var = myaxisc(3,0.08);
 p(1) = plot(var.p(1),100*Results.X,Results.T_w,'Color',[0,0,1]);
-p(2) = plot(var.p(2),100*Results.X,Results.Z,'Color','[.7 .7 .7]','LineWidth',3);
+p(2) = plot(var.p(2),100*Results.X,100*Results.Z,'Color','[.7 .7 .7]','LineWidth',3);
 p(3) = plot(var.p(3),100*Results.X,Results.q/1e6,'Color','r');
 var.xlim([-17,4]);
 var.ylabel(1,'Wall Temperature (K)');
